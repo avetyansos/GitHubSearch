@@ -6,15 +6,20 @@
 import UIKit
 
 protocol SearchDisplayLogic: AnyObject {
-
+    func displayUserRepos(viewModel: Search.UseCase.ViewModel)
+    func displayError(viewModel: Search.UseCase.ViewModel)
 }
 
-class SearchViewController: UIViewController, SearchDisplayLogic
-{
+class SearchViewController: UIViewController, SearchDisplayLogic, Storyboardable {
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
     private var searchText: String = ""
     @IBOutlet weak var searchField: UITextField!
+    private var reposList = [UserRepoViewModel]()
+    
+    static var storyboardName: StringConvertible {
+        return StoryboardType.main
+    }
     
     // MARK: Object lifecycle
     
@@ -65,14 +70,40 @@ class SearchViewController: UIViewController, SearchDisplayLogic
         super.viewDidLoad()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reposList.removeAll()
+    }
+    
     @IBAction func searchButtonAction(_ sender: Any) {
+        guard searchText != "" else { return }
+        var request = Search.UseCase.Request()
+        request.searchText = searchText
+        interactor?.fetchUserRepository(request: request)
+    }
+    
+    func displayUserRepos(viewModel: Search.UseCase.ViewModel) {
+        DispatchQueue.main.async {
+            self.router?.navigateToSearchList(viewModel: viewModel)
+        }
+    }
+    
+    func displayError(viewModel: Search.UseCase.ViewModel) {
+        DispatchQueue.main.async {
+            self.showErrorAlert(textString: viewModel.errosString)
+        }
     }
     
 }
 
 extension SearchViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
+        guard textField.text != "" else {
+            searchText = ""
+            return true
+        }
+        searchText = "\(textField.text ?? "")\(string)"
         return true
     }
 }

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67A89ED72833F52E00F65ECA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89ED62833F52E00F65ECA /* User.swift */; };
+		67A89EDA2833F84E00F65ECA /* ApiAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89ED92833F84E00F65ECA /* ApiAPIClient.swift */; };
+		67A89EDC2833FA6A00F65ECA /* App Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EDB2833FA6A00F65ECA /* App Constants.swift */; };
+		67A89EDF283520BE00F65ECA /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EDE283520BE00F65ECA /* UIViewController+Alert.swift */; };
+		67A89EE22835242100F65ECA /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A89EE12835242100F65ECA /* SearchList.storyboard */; };
+		67A89EE5283654CC00F65ECA /* RepositoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EE4283654CC00F65ECA /* RepositoryListTableViewCell.swift */; };
+		67A89EE7283657F000F65ECA /* StoryBoard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EE6283657F000F65ECA /* StoryBoard+Instantiate.swift */; };
+		67A89EE92836582A00F65ECA /* StoryboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EE82836582A00F65ECA /* StoryboardType.swift */; };
+		67A89EEB283659D500F65ECA /* Registerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EEA283659D500F65ECA /* Registerable.swift */; };
+		67A89EEE28365BA200F65ECA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EED28365BA200F65ECA /* ImageLoader.swift */; };
 		67BAEE2D2833AE1400A2CCE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE2C2833AE1400A2CCE8 /* AppDelegate.swift */; };
 		67BAEE2F2833AE1400A2CCE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE2E2833AE1400A2CCE8 /* SceneDelegate.swift */; };
 		67BAEE312833AE1400A2CCE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE302833AE1400A2CCE8 /* ViewController.swift */; };
@@ -54,6 +64,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67A89ED62833F52E00F65ECA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		67A89ED92833F84E00F65ECA /* ApiAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiAPIClient.swift; sourceTree = "<group>"; };
+		67A89EDB2833FA6A00F65ECA /* App Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Constants.swift"; sourceTree = "<group>"; };
+		67A89EDE283520BE00F65ECA /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		67A89EE12835242100F65ECA /* SearchList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchList.storyboard; sourceTree = "<group>"; };
+		67A89EE4283654CC00F65ECA /* RepositoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListTableViewCell.swift; sourceTree = "<group>"; };
+		67A89EE6283657F000F65ECA /* StoryBoard+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryBoard+Instantiate.swift"; sourceTree = "<group>"; };
+		67A89EE82836582A00F65ECA /* StoryboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardType.swift; sourceTree = "<group>"; };
+		67A89EEA283659D500F65ECA /* Registerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registerable.swift; sourceTree = "<group>"; };
+		67A89EED28365BA200F65ECA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		67BAEE292833AE1400A2CCE8 /* TestFlatRockTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFlatRockTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BAEE2C2833AE1400A2CCE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67BAEE2E2833AE1400A2CCE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +132,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67A89ED42833F51300F65ECA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				67BAEE762833AE7800A2CCE8 /* Details */,
+				67BAEE692833AE4B00A2CCE8 /* Search Results Screen */,
+				67BAEE5C2833AE2100A2CCE8 /* SearchScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		67A89ED52833F51E00F65ECA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67A89ED62833F52E00F65ECA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67A89ED82833F83900F65ECA /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				67A89EEC28365B9500F65ECA /* ImageLoader */,
+				67A89ED92833F84E00F65ECA /* ApiAPIClient.swift */,
+				67A89EDB2833FA6A00F65ECA /* App Constants.swift */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		67A89EDD283520AB00F65ECA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67A89EDE283520BE00F65ECA /* UIViewController+Alert.swift */,
+				67A89EE6283657F000F65ECA /* StoryBoard+Instantiate.swift */,
+				67A89EEA283659D500F65ECA /* Registerable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		67A89EE02835240200F65ECA /* Story Boards */ = {
+			isa = PBXGroup;
+			children = (
+				67BAEE322833AE1400A2CCE8 /* Main.storyboard */,
+				67A89EE12835242100F65ECA /* SearchList.storyboard */,
+				67A89EE82836582A00F65ECA /* StoryboardType.swift */,
+			);
+			path = "Story Boards";
+			sourceTree = "<group>";
+		};
+		67A89EE3283654A300F65ECA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				67A89EE4283654CC00F65ECA /* RepositoryListTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		67A89EEC28365B9500F65ECA /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				67A89EED28365BA200F65ECA /* ImageLoader.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
 		67BAEE202833AE1400A2CCE8 = {
 			isa = PBXGroup;
 			children = (
@@ -135,13 +219,14 @@
 		67BAEE2B2833AE1400A2CCE8 /* TestFlatRockTech */ = {
 			isa = PBXGroup;
 			children = (
-				67BAEE762833AE7800A2CCE8 /* Details */,
-				67BAEE692833AE4B00A2CCE8 /* Search Results Screen */,
-				67BAEE5C2833AE2100A2CCE8 /* SearchScreen */,
+				67A89EE02835240200F65ECA /* Story Boards */,
+				67A89EDD283520AB00F65ECA /* Extensions */,
+				67A89ED82833F83900F65ECA /* Additions */,
+				67A89ED52833F51E00F65ECA /* Models */,
+				67A89ED42833F51300F65ECA /* Screens */,
 				67BAEE2C2833AE1400A2CCE8 /* AppDelegate.swift */,
 				67BAEE2E2833AE1400A2CCE8 /* SceneDelegate.swift */,
 				67BAEE302833AE1400A2CCE8 /* ViewController.swift */,
-				67BAEE322833AE1400A2CCE8 /* Main.storyboard */,
 				67BAEE352833AE1600A2CCE8 /* Assets.xcassets */,
 				67BAEE372833AE1600A2CCE8 /* LaunchScreen.storyboard */,
 				67BAEE3A2833AE1600A2CCE8 /* Info.plist */,
@@ -182,6 +267,7 @@
 		67BAEE692833AE4B00A2CCE8 /* Search Results Screen */ = {
 			isa = PBXGroup;
 			children = (
+				67A89EE3283654A300F65ECA /* Cells */,
 				67BAEE6A2833AE7100A2CCE8 /* RepositoryListPresenter.swift */,
 				67BAEE6B2833AE7100A2CCE8 /* RepositoryListWorker.swift */,
 				67BAEE6C2833AE7100A2CCE8 /* RepositoryListRouter.swift */,
@@ -311,6 +397,7 @@
 			files = (
 				67BAEE392833AE1600A2CCE8 /* LaunchScreen.storyboard in Resources */,
 				67BAEE362833AE1600A2CCE8 /* Assets.xcassets in Resources */,
+				67A89EE22835242100F65ECA /* SearchList.storyboard in Resources */,
 				67BAEE342833AE1400A2CCE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,25 +425,34 @@
 			files = (
 				67BAEE742833AE7100A2CCE8 /* RepositoryListViewController.swift in Sources */,
 				67BAEE702833AE7100A2CCE8 /* RepositoryListPresenter.swift in Sources */,
+				67A89EEE28365BA200F65ECA /* ImageLoader.swift in Sources */,
 				67BAEE7D2833AE9100A2CCE8 /* RepositoryDetailsPresenter.swift in Sources */,
 				67BAEE7F2833AE9100A2CCE8 /* RepositoryDetailsRouter.swift in Sources */,
 				67BAEE822833AE9100A2CCE8 /* RepositoryDetailsInteractor.swift in Sources */,
+				67A89EDF283520BE00F65ECA /* UIViewController+Alert.swift in Sources */,
 				67BAEE662833AE4000A2CCE8 /* SearchModels.swift in Sources */,
 				67BAEE652833AE4000A2CCE8 /* SearchRouter.swift in Sources */,
+				67A89EE7283657F000F65ECA /* StoryBoard+Instantiate.swift in Sources */,
 				67BAEE672833AE4000A2CCE8 /* SearchViewController.swift in Sources */,
+				67A89EE92836582A00F65ECA /* StoryboardType.swift in Sources */,
 				67BAEE682833AE4000A2CCE8 /* SearchInteractor.swift in Sources */,
+				67A89EDA2833F84E00F65ECA /* ApiAPIClient.swift in Sources */,
 				67BAEE7E2833AE9100A2CCE8 /* RepositoryDetailsWorker.swift in Sources */,
+				67A89ED72833F52E00F65ECA /* User.swift in Sources */,
 				67BAEE312833AE1400A2CCE8 /* ViewController.swift in Sources */,
 				67BAEE642833AE4000A2CCE8 /* SearchWorker.swift in Sources */,
+				67A89EEB283659D500F65ECA /* Registerable.swift in Sources */,
 				67BAEE712833AE7100A2CCE8 /* RepositoryListWorker.swift in Sources */,
 				67BAEE2D2833AE1400A2CCE8 /* AppDelegate.swift in Sources */,
 				67BAEE802833AE9100A2CCE8 /* RepositoryDetailsModels.swift in Sources */,
 				67BAEE632833AE4000A2CCE8 /* SearchPresenter.swift in Sources */,
 				67BAEE722833AE7100A2CCE8 /* RepositoryListRouter.swift in Sources */,
 				67BAEE2F2833AE1400A2CCE8 /* SceneDelegate.swift in Sources */,
+				67A89EDC2833FA6A00F65ECA /* App Constants.swift in Sources */,
 				67BAEE812833AE9100A2CCE8 /* RepositoryDetailsViewController.swift in Sources */,
 				67BAEE732833AE7100A2CCE8 /* RepositoryListModels.swift in Sources */,
 				67BAEE752833AE7100A2CCE8 /* RepositoryListInteractor.swift in Sources */,
+				67A89EE5283654CC00F65ECA /* RepositoryListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

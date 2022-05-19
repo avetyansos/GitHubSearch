@@ -6,7 +6,7 @@
 import UIKit
 
 protocol RepositoryDetailsBusinessLogic {
-    
+    func getRepoDetails(request: RepositoryDetails.UseCase.Request)
 }
 
 protocol RepositoryDetailsDataStore {
@@ -19,4 +19,20 @@ class RepositoryDetailsInteractor: RepositoryDetailsBusinessLogic, RepositoryDet
     var worker: RepositoryDetailsWorker?
     
     
+    
+    func getRepoDetails(request: RepositoryDetails.UseCase.Request) {
+        worker = RepositoryDetailsWorker()
+        var response = RepositoryDetails.UseCase.Response()
+        
+        worker?.fetchRepoDetails(owner: request.owner, repoName: request.repoName, success: { userRepos in
+            response.repoModel = userRepos
+            response.repoName = request.repoName
+            response.owner = request.owner
+            self.presenter?.presentUserRepo(response: response)
+        }, failure: { error in
+            response.errosString = error
+            self.presenter?.presentError(response: response)
+        })
+        
+    }
 }

@@ -13,5 +13,7 @@ struct AppConstants {
         
         
         static let userRepoTail = "users"
+        static let repoDetailsTail = "repos"
+        
     }
 }

@@ -118,4 +118,8 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.navigateToDetails(owner: repos[indexPath.row].loginName, repoName: repos[indexPath.row].repoName)
+    }
 }

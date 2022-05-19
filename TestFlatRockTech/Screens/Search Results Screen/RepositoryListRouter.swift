@@ -5,8 +5,8 @@
 
 import UIKit
 
-@objc protocol RepositoryListRoutingLogic {
-    
+protocol RepositoryListRoutingLogic {
+    func navigateToDetails(owner: String, repoName: String)
 }
 
 protocol RepositoryListDataPassing {
@@ -17,5 +17,12 @@ class RepositoryListRouter: NSObject, RepositoryListRoutingLogic, RepositoryList
 {
     weak var viewController: RepositoryListViewController?
     var dataStore: RepositoryListDataStore?
+    
+    func navigateToDetails(owner: String, repoName: String) {
+        let controller = RepositoryDetailsViewController.instantiateFromStoryboard()
+        controller.owner = owner
+        controller.repoName = repoName
+        viewController?.navigationController?.pushViewController(controller, animated: true)
+    }
     
 }

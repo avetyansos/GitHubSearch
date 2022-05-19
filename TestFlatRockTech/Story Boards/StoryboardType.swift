@@ -11,5 +11,6 @@ enum StoryboardType: String, StringConvertible {
     // MARK: - Main
     case main = "Main"
     case searchList = "SearchList"
+    case details = "RepoDetails"
 }
 

@@ -4,17 +4,30 @@
 //
 
 import UIKit
+import WebKit
 
 protocol RepositoryDetailsDisplayLogic: AnyObject {
-
+    func displayRepoDetails(viewModel: RepositoryDetails.UseCase.ViewModel)
+    func displayError(viewModel: RepositoryDetails.UseCase.ViewModel)
 }
 
-class RepositoryDetailsViewController: UIViewController, RepositoryDetailsDisplayLogic
+class RepositoryDetailsViewController: UIViewController, RepositoryDetailsDisplayLogic, Storyboardable
 {
     var interactor: RepositoryDetailsBusinessLogic?
     var router: (NSObjectProtocol & RepositoryDetailsRoutingLogic & RepositoryDetailsDataPassing)?
+    @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var stareButton: UIButton!
+    private var detailsViewModel: RepoDetailViewModel!
+    var owner = ""
+    var repoName = ""
     
     // MARK: Object lifecycle
+    
+    static var storyboardName: StringConvertible {
+        return StoryboardType.details
+    }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
     {
@@ -61,6 +74,38 @@ class RepositoryDetailsViewController: UIViewController, RepositoryDetailsDispla
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        loadDetails()
+        
+    }
+    
+    private func loadDetails() {
+        var request = RepositoryDetails.UseCase.Request()
+        request.repoName = repoName
+        request.owner = owner
+        interactor?.getRepoDetails(request: request)
+    }
+    
+    func displayRepoDetails(viewModel: RepositoryDetails.UseCase.ViewModel) {
+        DispatchQueue.main.async {
+            self.createdAtLabel.text = viewModel.repoViewModel.createdAt
+            self.languageLabel.text = viewModel.repoViewModel.language
+            self.descriptionLabel.text = viewModel.repoViewModel.description
+        }
+    }
+    
+    func displayError(viewModel: RepositoryDetails.UseCase.ViewModel) {
+        DispatchQueue.main.async {
+            self.showErrorAlert(textString: viewModel.errosString)
+        }
+    }
+    
+    @IBAction func stareButtonAction(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func openBrowserAction(_ sender: Any) {
+        
+        UIApplication.shared.open(detailsViewModel.repoURL)
         
     }
     

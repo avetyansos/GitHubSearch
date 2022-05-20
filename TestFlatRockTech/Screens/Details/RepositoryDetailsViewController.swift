@@ -86,6 +86,7 @@ class RepositoryDetailsViewController: UIViewController, RepositoryDetailsDispla
     }
     
     func displayRepoDetails(viewModel: RepositoryDetails.UseCase.ViewModel) {
+        detailsViewModel = viewModel.repoViewModel
         DispatchQueue.main.async {
             self.createdAtLabel.text = viewModel.repoViewModel.createdAt
             self.languageLabel.text = viewModel.repoViewModel.language

@@ -73,6 +73,7 @@ class RepositoryListViewController: UIViewController, RepositoryListDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        RepoListTableViewCell.register(to: tableView)
         tableView.reloadData()
     }
     
@@ -107,8 +108,8 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = RepositoryListTableViewCell.dequeue(from: tableView) else {
-            fatalError("Could not dequeue cell with type: \(RepositoryListTableViewCell.self)")
+        guard let cell = RepoListTableViewCell.dequeue(from: tableView) else {
+            fatalError("Could not dequeue cell with type: \(RepoListTableViewCell.self)")
         }
         cell.userRepo = repos[indexPath.row]
         

@@ -1,14 +1,14 @@
 //
-//  RepositoryListTableViewCell.swift
+//  RepoListTableViewCell.swift
 //  TestFlatRockTech
 //
-//  Created by Sos Avetyan on 5/19/22.
+//  Created by Sos Avetyan on 5/20/22.
 //
 
 import UIKit
 
-class RepositoryListTableViewCell: UITableViewCell, Registerable {
-    
+class RepoListTableViewCell: UITableViewCell, Registerable {
+
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var repoNameLabel: UILabel!
@@ -29,6 +29,7 @@ class RepositoryListTableViewCell: UITableViewCell, Registerable {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
+    
 }

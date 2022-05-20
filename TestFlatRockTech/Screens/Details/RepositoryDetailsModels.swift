@@ -14,6 +14,7 @@ enum RepositoryDetails
         {
             var repoName = ""
             var owner = ""
+            var userRepoViewModel: UserRepoViewModel!
         }
         struct Response
         {

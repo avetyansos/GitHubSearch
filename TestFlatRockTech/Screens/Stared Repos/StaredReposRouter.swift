@@ -1,28 +1,30 @@
 //
-//  RepositoryListRouter.swift
+//  StaredReposRouter.swift
 //  TestFlatRockTech
 //
 
 import UIKit
 
-protocol RepositoryListRoutingLogic {
+protocol StaredReposRoutingLogic {
     func navigateToDetails(owner: String, repoName: String, repoDetailsViewModel: UserRepoViewModel)
 }
 
-protocol RepositoryListDataPassing {
-    var dataStore: RepositoryListDataStore? { get }
+protocol StaredReposDataPassing {
+    var dataStore: StaredReposDataStore? { get }
 }
 
-class RepositoryListRouter: NSObject, RepositoryListRoutingLogic, RepositoryListDataPassing
+class StaredReposRouter: NSObject, StaredReposRoutingLogic, StaredReposDataPassing
 {
-    weak var viewController: RepositoryListViewController?
-    var dataStore: RepositoryListDataStore?
+    weak var viewController: StaredReposViewController?
+    var dataStore: StaredReposDataStore?
+    
     
     func navigateToDetails(owner: String, repoName: String, repoDetailsViewModel: UserRepoViewModel) {
         let controller = RepositoryDetailsViewController.instantiateFromStoryboard()
         controller.owner = owner
         controller.repoName = repoName
         controller.userReposViewMode = repoDetailsViewModel
+        controller.isSaved = true
         viewController?.navigationController?.pushViewController(controller, animated: true)
     }
     

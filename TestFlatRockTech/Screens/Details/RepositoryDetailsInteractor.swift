@@ -7,6 +7,7 @@ import UIKit
 
 protocol RepositoryDetailsBusinessLogic {
     func getRepoDetails(request: RepositoryDetails.UseCase.Request)
+    func stareRepoDetails(request: RepositoryDetails.UseCase.Request)
 }
 
 protocol RepositoryDetailsDataStore {
@@ -34,5 +35,10 @@ class RepositoryDetailsInteractor: RepositoryDetailsBusinessLogic, RepositoryDet
             self.presenter?.presentError(response: response)
         })
         
+    }
+    
+    func stareRepoDetails(request: RepositoryDetails.UseCase.Request) {
+        let starWorker = StaredReposWorker()
+        starWorker.storeData(data: request.userRepoViewModel)
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 
 struct UserRepo: Codable {
@@ -31,14 +32,14 @@ struct UserRepo: Codable {
     
     func makeViewModel() -> UserRepoViewModel {
         let viewModel = UserRepoViewModel(id: id,
-                                      node: node,
-                                      repoName: name,
-                                      created: created,
-                                      url: url,
-                                      language: language,
-                                      description: description,
-                                      loginName: owner.login,
-                                      avatarURL: URL(string: owner.avatar) ?? URL(fileURLWithPath: ""))
+                                          node: node,
+                                          repoName: name,
+                                          created: created,
+                                          url: url,
+                                          language: language,
+                                          description: description,
+                                          loginName: owner.login,
+                                          avatarURL: URL(string: owner.avatar) ?? URL(fileURLWithPath: ""))
         
         return viewModel
     }
@@ -74,4 +75,48 @@ struct UserRepoViewModel {
     let description: String?
     let loginName: String
     let avatarURL: URL
+    
+    func toDB() -> UserRepoDB {
+        let dbModel = UserRepoDB()
+        dbModel.id = id
+        dbModel.node = node
+        dbModel.repoName = repoName
+        dbModel.created = created
+        dbModel.url = url
+        dbModel.language = language
+        dbModel.desc = description ?? ""
+        dbModel.loginName = loginName
+        dbModel.avatarURL = avatarURL.absoluteString
+        return dbModel
+    }
+}
+
+class UserRepoDB: Object, IdentifiableObject {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var node: String = ""
+    @objc dynamic var repoName: String = ""
+    @objc dynamic var created: String = ""
+    @objc dynamic var url: String = ""
+    @objc dynamic var language: String = ""
+    @objc dynamic var desc: String = ""
+    @objc dynamic var loginName: String = ""
+    @objc dynamic var avatarURL: String = ""
+    
+    override static func primaryKey() -> String {
+        return "id"
+    }
+    
+    func toUserModel() -> UserRepoViewModel {
+        
+        let userModel = UserRepoViewModel(id: id,
+                                          node: node,
+                                          repoName: repoName,
+                                          created: created,
+                                          url: url,
+                                          language: language,
+                                          description: desc,
+                                          loginName: loginName,
+                                          avatarURL: URL(string: avatarURL)!)
+        return userModel
+    }
 }

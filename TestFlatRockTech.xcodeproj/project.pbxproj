@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2789EDD08E89FD0CD67C3DEF /* Pods_TestFlatRockTechTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3B0180D0D6C140D865B404 /* Pods_TestFlatRockTechTests.framework */; };
+		677C451428379AA80019AFE2 /* IdentifiableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C451328379AA80019AFE2 /* IdentifiableObject.swift */; };
+		677C451628379CE40019AFE2 /* RealmConnectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C451528379CE40019AFE2 /* RealmConnectable.swift */; };
+		677C451828379D570019AFE2 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C451728379D570019AFE2 /* RealmError.swift */; };
+		677C451A28379DB00019AFE2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C451928379DB00019AFE2 /* Constants.swift */; };
 		67A89ED72833F52E00F65ECA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89ED62833F52E00F65ECA /* User.swift */; };
 		67A89EDA2833F84E00F65ECA /* ApiAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89ED92833F84E00F65ECA /* ApiAPIClient.swift */; };
 		67A89EDC2833FA6A00F65ECA /* App Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EDB2833FA6A00F65ECA /* App Constants.swift */; };
@@ -22,6 +27,12 @@
 		67A89EF62837799B00F65ECA /* StaredRepos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A89EF52837799B00F65ECA /* StaredRepos.storyboard */; };
 		67A89EF928377A0F00F65ECA /* RepoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EF728377A0F00F65ECA /* RepoListTableViewCell.swift */; };
 		67A89EFA28377A0F00F65ECA /* RepoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67A89EF828377A0F00F65ECA /* RepoListTableViewCell.xib */; };
+		67A89F022837963F00F65ECA /* StaredReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EFC2837963F00F65ECA /* StaredReposPresenter.swift */; };
+		67A89F032837963F00F65ECA /* StaredReposWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EFD2837963F00F65ECA /* StaredReposWorker.swift */; };
+		67A89F042837963F00F65ECA /* StaredReposRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EFE2837963F00F65ECA /* StaredReposRouter.swift */; };
+		67A89F052837963F00F65ECA /* StaredReposModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89EFF2837963F00F65ECA /* StaredReposModels.swift */; };
+		67A89F062837963F00F65ECA /* StaredReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89F002837963F00F65ECA /* StaredReposViewController.swift */; };
+		67A89F072837963F00F65ECA /* StaredReposInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A89F012837963F00F65ECA /* StaredReposInteractor.swift */; };
 		67BAEE2D2833AE1400A2CCE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE2C2833AE1400A2CCE8 /* AppDelegate.swift */; };
 		67BAEE2F2833AE1400A2CCE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE2E2833AE1400A2CCE8 /* SceneDelegate.swift */; };
 		67BAEE312833AE1400A2CCE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE302833AE1400A2CCE8 /* ViewController.swift */; };
@@ -49,6 +60,8 @@
 		67BAEE802833AE9100A2CCE8 /* RepositoryDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE7A2833AE9100A2CCE8 /* RepositoryDetailsModels.swift */; };
 		67BAEE812833AE9100A2CCE8 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE7B2833AE9100A2CCE8 /* RepositoryDetailsViewController.swift */; };
 		67BAEE822833AE9100A2CCE8 /* RepositoryDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BAEE7C2833AE9100A2CCE8 /* RepositoryDetailsInteractor.swift */; };
+		792ABCB05BEA20E3C29DD018 /* Pods_TestFlatRockTech_TestFlatRockTechUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC01A175753E59B2A4ED0B2D /* Pods_TestFlatRockTech_TestFlatRockTechUITests.framework */; };
+		7D3DF06FE68B92FDA7639446 /* Pods_TestFlatRockTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28019800BE7FAB79925E2CAA /* Pods_TestFlatRockTech.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +82,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		056937E8D208F9BCDDE2E1A2 /* Pods-TestFlatRockTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFlatRockTech.release.xcconfig"; path = "Target Support Files/Pods-TestFlatRockTech/Pods-TestFlatRockTech.release.xcconfig"; sourceTree = "<group>"; };
+		28019800BE7FAB79925E2CAA /* Pods_TestFlatRockTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFlatRockTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B84535CCA3D3C982756F55 /* Pods-TestFlatRockTech-TestFlatRockTechUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFlatRockTech-TestFlatRockTechUITests.release.xcconfig"; path = "Target Support Files/Pods-TestFlatRockTech-TestFlatRockTechUITests/Pods-TestFlatRockTech-TestFlatRockTechUITests.release.xcconfig"; sourceTree = "<group>"; };
+		677C451328379AA80019AFE2 /* IdentifiableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableObject.swift; sourceTree = "<group>"; };
+		677C451528379CE40019AFE2 /* RealmConnectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConnectable.swift; sourceTree = "<group>"; };
+		677C451728379D570019AFE2 /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		677C451928379DB00019AFE2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		67A89ED62833F52E00F65ECA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		67A89ED92833F84E00F65ECA /* ApiAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiAPIClient.swift; sourceTree = "<group>"; };
 		67A89EDB2833FA6A00F65ECA /* App Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Constants.swift"; sourceTree = "<group>"; };
@@ -84,6 +104,12 @@
 		67A89EF52837799B00F65ECA /* StaredRepos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StaredRepos.storyboard; sourceTree = "<group>"; };
 		67A89EF728377A0F00F65ECA /* RepoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListTableViewCell.swift; sourceTree = "<group>"; };
 		67A89EF828377A0F00F65ECA /* RepoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoListTableViewCell.xib; sourceTree = "<group>"; };
+		67A89EFC2837963F00F65ECA /* StaredReposPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaredReposPresenter.swift; sourceTree = "<group>"; };
+		67A89EFD2837963F00F65ECA /* StaredReposWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaredReposWorker.swift; sourceTree = "<group>"; };
+		67A89EFE2837963F00F65ECA /* StaredReposRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaredReposRouter.swift; sourceTree = "<group>"; };
+		67A89EFF2837963F00F65ECA /* StaredReposModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaredReposModels.swift; sourceTree = "<group>"; };
+		67A89F002837963F00F65ECA /* StaredReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaredReposViewController.swift; sourceTree = "<group>"; };
+		67A89F012837963F00F65ECA /* StaredReposInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaredReposInteractor.swift; sourceTree = "<group>"; };
 		67BAEE292833AE1400A2CCE8 /* TestFlatRockTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFlatRockTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BAEE2C2833AE1400A2CCE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67BAEE2E2833AE1400A2CCE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +141,12 @@
 		67BAEE7A2833AE9100A2CCE8 /* RepositoryDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsModels.swift; sourceTree = "<group>"; };
 		67BAEE7B2833AE9100A2CCE8 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
 		67BAEE7C2833AE9100A2CCE8 /* RepositoryDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsInteractor.swift; sourceTree = "<group>"; };
+		6F3B0180D0D6C140D865B404 /* Pods_TestFlatRockTechTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFlatRockTechTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		878380D2846EFDC39E63BD4D /* Pods-TestFlatRockTechTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFlatRockTechTests.release.xcconfig"; path = "Target Support Files/Pods-TestFlatRockTechTests/Pods-TestFlatRockTechTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D5AD9C8D4D2A43EFE00DC61 /* Pods-TestFlatRockTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFlatRockTech.debug.xcconfig"; path = "Target Support Files/Pods-TestFlatRockTech/Pods-TestFlatRockTech.debug.xcconfig"; sourceTree = "<group>"; };
+		F9E3E835276AF851E77A9615 /* Pods-TestFlatRockTech-TestFlatRockTechUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFlatRockTech-TestFlatRockTechUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestFlatRockTech-TestFlatRockTechUITests/Pods-TestFlatRockTech-TestFlatRockTechUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC01A175753E59B2A4ED0B2D /* Pods_TestFlatRockTech_TestFlatRockTechUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFlatRockTech_TestFlatRockTechUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3A4D12950687EA151DC4C7 /* Pods-TestFlatRockTechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFlatRockTechTests.debug.xcconfig"; path = "Target Support Files/Pods-TestFlatRockTechTests/Pods-TestFlatRockTechTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3DF06FE68B92FDA7639446 /* Pods_TestFlatRockTech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2789EDD08E89FD0CD67C3DEF /* Pods_TestFlatRockTechTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792ABCB05BEA20E3C29DD018 /* Pods_TestFlatRockTech_TestFlatRockTechUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +180,7 @@
 		67A89ED42833F51300F65ECA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				67A89EFB2837962600F65ECA /* Stared Repos */,
 				67BAEE762833AE7800A2CCE8 /* Details */,
 				67BAEE692833AE4B00A2CCE8 /* Search Results Screen */,
 				67BAEE5C2833AE2100A2CCE8 /* SearchScreen */,
@@ -164,9 +200,12 @@
 		67A89ED82833F83900F65ECA /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				67A89F082837965000F65ECA /* Database Worker */,
 				67A89EEC28365B9500F65ECA /* ImageLoader */,
 				67A89ED92833F84E00F65ECA /* ApiAPIClient.swift */,
 				67A89EDB2833FA6A00F65ECA /* App Constants.swift */,
+				677C451328379AA80019AFE2 /* IdentifiableObject.swift */,
+				677C451928379DB00019AFE2 /* Constants.swift */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -211,6 +250,28 @@
 			path = ImageLoader;
 			sourceTree = "<group>";
 		};
+		67A89EFB2837962600F65ECA /* Stared Repos */ = {
+			isa = PBXGroup;
+			children = (
+				67A89EFC2837963F00F65ECA /* StaredReposPresenter.swift */,
+				67A89EFD2837963F00F65ECA /* StaredReposWorker.swift */,
+				67A89EFE2837963F00F65ECA /* StaredReposRouter.swift */,
+				67A89EFF2837963F00F65ECA /* StaredReposModels.swift */,
+				67A89F002837963F00F65ECA /* StaredReposViewController.swift */,
+				67A89F012837963F00F65ECA /* StaredReposInteractor.swift */,
+			);
+			path = "Stared Repos";
+			sourceTree = "<group>";
+		};
+		67A89F082837965000F65ECA /* Database Worker */ = {
+			isa = PBXGroup;
+			children = (
+				677C451528379CE40019AFE2 /* RealmConnectable.swift */,
+				677C451728379D570019AFE2 /* RealmError.swift */,
+			);
+			path = "Database Worker";
+			sourceTree = "<group>";
+		};
 		67BAEE202833AE1400A2CCE8 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +279,8 @@
 				67BAEE422833AE1700A2CCE8 /* TestFlatRockTechTests */,
 				67BAEE4C2833AE1700A2CCE8 /* TestFlatRockTechUITests */,
 				67BAEE2A2833AE1400A2CCE8 /* Products */,
+				C97004AD6967D6B08956A0B7 /* Pods */,
+				6971EB7468580A8EB3334621 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -306,6 +369,29 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		6971EB7468580A8EB3334621 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28019800BE7FAB79925E2CAA /* Pods_TestFlatRockTech.framework */,
+				FC01A175753E59B2A4ED0B2D /* Pods_TestFlatRockTech_TestFlatRockTechUITests.framework */,
+				6F3B0180D0D6C140D865B404 /* Pods_TestFlatRockTechTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C97004AD6967D6B08956A0B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AD9C8D4D2A43EFE00DC61 /* Pods-TestFlatRockTech.debug.xcconfig */,
+				056937E8D208F9BCDDE2E1A2 /* Pods-TestFlatRockTech.release.xcconfig */,
+				F9E3E835276AF851E77A9615 /* Pods-TestFlatRockTech-TestFlatRockTechUITests.debug.xcconfig */,
+				30B84535CCA3D3C982756F55 /* Pods-TestFlatRockTech-TestFlatRockTechUITests.release.xcconfig */,
+				FF3A4D12950687EA151DC4C7 /* Pods-TestFlatRockTechTests.debug.xcconfig */,
+				878380D2846EFDC39E63BD4D /* Pods-TestFlatRockTechTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,9 +399,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67BAEE532833AE1700A2CCE8 /* Build configuration list for PBXNativeTarget "TestFlatRockTech" */;
 			buildPhases = (
+				C9EE57F9B670590B1CB182EB /* [CP] Check Pods Manifest.lock */,
 				67BAEE252833AE1400A2CCE8 /* Sources */,
 				67BAEE262833AE1400A2CCE8 /* Frameworks */,
 				67BAEE272833AE1400A2CCE8 /* Resources */,
+				FFC664E3E70C77F8B3E87F65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,6 +418,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67BAEE562833AE1700A2CCE8 /* Build configuration list for PBXNativeTarget "TestFlatRockTechTests" */;
 			buildPhases = (
+				724EE3B6D34F2FED3803C873 /* [CP] Check Pods Manifest.lock */,
 				67BAEE3B2833AE1700A2CCE8 /* Sources */,
 				67BAEE3C2833AE1700A2CCE8 /* Frameworks */,
 				67BAEE3D2833AE1700A2CCE8 /* Resources */,
@@ -348,9 +437,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67BAEE592833AE1700A2CCE8 /* Build configuration list for PBXNativeTarget "TestFlatRockTechUITests" */;
 			buildPhases = (
+				53050953A39984C3487CCCD2 /* [CP] Check Pods Manifest.lock */,
 				67BAEE452833AE1700A2CCE8 /* Sources */,
 				67BAEE462833AE1700A2CCE8 /* Frameworks */,
 				67BAEE472833AE1700A2CCE8 /* Resources */,
+				CF6CF5C7A048F60F55E30FC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -436,6 +527,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53050953A39984C3487CCCD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFlatRockTech-TestFlatRockTechUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		724EE3B6D34F2FED3803C873 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFlatRockTechTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9EE57F9B670590B1CB182EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFlatRockTech-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF6CF5C7A048F60F55E30FC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFlatRockTech-TestFlatRockTechUITests/Pods-TestFlatRockTech-TestFlatRockTechUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFlatRockTech-TestFlatRockTechUITests/Pods-TestFlatRockTech-TestFlatRockTechUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFlatRockTech-TestFlatRockTechUITests/Pods-TestFlatRockTech-TestFlatRockTechUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC664E3E70C77F8B3E87F65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFlatRockTech/Pods-TestFlatRockTech-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFlatRockTech/Pods-TestFlatRockTech-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFlatRockTech/Pods-TestFlatRockTech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		67BAEE252833AE1400A2CCE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -443,6 +637,7 @@
 			files = (
 				67BAEE742833AE7100A2CCE8 /* RepositoryListViewController.swift in Sources */,
 				67BAEE702833AE7100A2CCE8 /* RepositoryListPresenter.swift in Sources */,
+				67A89F022837963F00F65ECA /* StaredReposPresenter.swift in Sources */,
 				67A89EEE28365BA200F65ECA /* ImageLoader.swift in Sources */,
 				67BAEE7D2833AE9100A2CCE8 /* RepositoryDetailsPresenter.swift in Sources */,
 				67BAEE7F2833AE9100A2CCE8 /* RepositoryDetailsRouter.swift in Sources */,
@@ -450,12 +645,18 @@
 				67A89EDF283520BE00F65ECA /* UIViewController+Alert.swift in Sources */,
 				67BAEE662833AE4000A2CCE8 /* SearchModels.swift in Sources */,
 				67BAEE652833AE4000A2CCE8 /* SearchRouter.swift in Sources */,
+				677C451428379AA80019AFE2 /* IdentifiableObject.swift in Sources */,
+				677C451A28379DB00019AFE2 /* Constants.swift in Sources */,
+				67A89F032837963F00F65ECA /* StaredReposWorker.swift in Sources */,
 				67A89EE7283657F000F65ECA /* StoryBoard+Instantiate.swift in Sources */,
 				67BAEE672833AE4000A2CCE8 /* SearchViewController.swift in Sources */,
+				677C451828379D570019AFE2 /* RealmError.swift in Sources */,
 				67A89EE92836582A00F65ECA /* StoryboardType.swift in Sources */,
 				67BAEE682833AE4000A2CCE8 /* SearchInteractor.swift in Sources */,
+				67A89F062837963F00F65ECA /* StaredReposViewController.swift in Sources */,
 				67A89EDA2833F84E00F65ECA /* ApiAPIClient.swift in Sources */,
 				67A89EF42836962B00F65ECA /* DateString+ToCorrectString.swift in Sources */,
+				67A89F042837963F00F65ECA /* StaredReposRouter.swift in Sources */,
 				67BAEE7E2833AE9100A2CCE8 /* RepositoryDetailsWorker.swift in Sources */,
 				67A89ED72833F52E00F65ECA /* User.swift in Sources */,
 				67BAEE312833AE1400A2CCE8 /* ViewController.swift in Sources */,
@@ -468,10 +669,13 @@
 				67A89EF928377A0F00F65ECA /* RepoListTableViewCell.swift in Sources */,
 				67BAEE632833AE4000A2CCE8 /* SearchPresenter.swift in Sources */,
 				67BAEE722833AE7100A2CCE8 /* RepositoryListRouter.swift in Sources */,
+				677C451628379CE40019AFE2 /* RealmConnectable.swift in Sources */,
+				67A89F072837963F00F65ECA /* StaredReposInteractor.swift in Sources */,
 				67BAEE2F2833AE1400A2CCE8 /* SceneDelegate.swift in Sources */,
 				67A89EDC2833FA6A00F65ECA /* App Constants.swift in Sources */,
 				67BAEE812833AE9100A2CCE8 /* RepositoryDetailsViewController.swift in Sources */,
 				67BAEE732833AE7100A2CCE8 /* RepositoryListModels.swift in Sources */,
+				67A89F052837963F00F65ECA /* StaredReposModels.swift in Sources */,
 				67BAEE752833AE7100A2CCE8 /* RepositoryListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +848,7 @@
 		};
 		67BAEE542833AE1700A2CCE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D5AD9C8D4D2A43EFE00DC61 /* Pods-TestFlatRockTech.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -655,6 +860,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -672,6 +878,7 @@
 		};
 		67BAEE552833AE1700A2CCE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 056937E8D208F9BCDDE2E1A2 /* Pods-TestFlatRockTech.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -683,6 +890,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -700,6 +908,7 @@
 		};
 		67BAEE572833AE1700A2CCE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF3A4D12950687EA151DC4C7 /* Pods-TestFlatRockTechTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -720,6 +929,7 @@
 		};
 		67BAEE582833AE1700A2CCE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 878380D2846EFDC39E63BD4D /* Pods-TestFlatRockTechTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -740,6 +950,7 @@
 		};
 		67BAEE5A2833AE1700A2CCE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9E3E835276AF851E77A9615 /* Pods-TestFlatRockTech-TestFlatRockTechUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -758,6 +969,7 @@
 		};
 		67BAEE5B2833AE1700A2CCE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30B84535CCA3D3C982756F55 /* Pods-TestFlatRockTech-TestFlatRockTechUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

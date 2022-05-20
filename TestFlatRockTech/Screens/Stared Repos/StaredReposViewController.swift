@@ -1,30 +1,21 @@
 //
-//  RepositoryListViewController.swift
+//  StaredReposViewController.swift
 //  TestFlatRockTech
 //
 
 import UIKit
 
-protocol RepositoryListDisplayLogic: AnyObject {
-    func displayUserRepos(viewModel: RepositoryList.UseCase.ViewModel)
-    func displayError(viewModel: RepositoryList.UseCase.ViewModel)
+protocol StaredReposDisplayLogic: AnyObject {
+    func displayRepos(viewModel: StaredRepos.UseCase.ViewModel)
+    func displayError(viewModel: StaredRepos.UseCase.ViewModel)
 }
 
-class RepositoryListViewController: UIViewController, RepositoryListDisplayLogic, Storyboardable {
-    var interactor: RepositoryListBusinessLogic?
-    var router: (NSObjectProtocol & RepositoryListRoutingLogic & RepositoryListDataPassing)?
-    var reposViewModel: RepoViewModel! {
-        didSet {
-            reposViewModel.currentpage += 1
-            repos = reposViewModel.userRepoViewModel
-        }
-    }
-    private var repos = [UserRepoViewModel]()
+class StaredReposViewController: UIViewController, StaredReposDisplayLogic
+{
+    var interactor: StaredReposBusinessLogic?
+    var router: (NSObjectProtocol & StaredReposRoutingLogic & StaredReposDataPassing)?
     @IBOutlet weak var tableView: UITableView!
-    
-    static var storyboardName: StringConvertible {
-        return StoryboardType.searchList
-    }
+    private var repos = [UserRepoViewModel]()
     
     // MARK: Object lifecycle
     
@@ -45,9 +36,9 @@ class RepositoryListViewController: UIViewController, RepositoryListDisplayLogic
     private func setup()
     {
         let viewController = self
-        let interactor = RepositoryListInteractor()
-        let presenter = RepositoryListPresenter()
-        let router = RepositoryListRouter()
+        let interactor = StaredReposInteractor()
+        let presenter = StaredReposPresenter()
+        let router = StaredReposRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -74,34 +65,25 @@ class RepositoryListViewController: UIViewController, RepositoryListDisplayLogic
     {
         super.viewDidLoad()
         RepoListTableViewCell.register(to: tableView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        interactor?.getElements()
+    }
+    
+    func displayRepos(viewModel: StaredRepos.UseCase.ViewModel) {
+        repos = viewModel.repos
         tableView.reloadData()
     }
     
-    func displayUserRepos(viewModel: RepositoryList.UseCase.ViewModel) {
-        DispatchQueue.main.async {
-            self.reposViewModel = viewModel.userRpos
-            self.tableView.reloadData()
-        }
-    }
-    
-    func displayError(viewModel: RepositoryList.UseCase.ViewModel) {
-        DispatchQueue.main.async {
-            self.showErrorAlert(textString: viewModel.errosString)
-        }
-    }
-    
-    private func reloadData() {
-        if reposViewModel.needToReload {
-            var request = RepositoryList.UseCase.Request()
-            request.userRpos = reposViewModel
-            interactor?.loadMoreRepos(request: request)
-        }
+    func displayError(viewModel: StaredRepos.UseCase.ViewModel) {
+        self.showErrorAlert(textString: viewModel.errorString)
     }
     
 }
 
-
-extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSource {
+extension StaredReposViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repos.count
@@ -112,10 +94,6 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
             fatalError("Could not dequeue cell with type: \(RepoListTableViewCell.self)")
         }
         cell.userRepo = repos[indexPath.row]
-        
-        if indexPath.row == repos.count - 1 {
-            reloadData()
-        }
         
         return cell
     }

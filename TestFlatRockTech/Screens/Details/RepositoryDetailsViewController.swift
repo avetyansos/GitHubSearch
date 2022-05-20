@@ -20,6 +20,8 @@ class RepositoryDetailsViewController: UIViewController, RepositoryDetailsDispla
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var stareButton: UIButton!
     private var detailsViewModel: RepoDetailViewModel!
+    var isSaved = false
+    var userReposViewMode: UserRepoViewModel!
     var owner = ""
     var repoName = ""
     
@@ -82,6 +84,7 @@ class RepositoryDetailsViewController: UIViewController, RepositoryDetailsDispla
         var request = RepositoryDetails.UseCase.Request()
         request.repoName = repoName
         request.owner = owner
+        stareButton.isHidden = isSaved
         interactor?.getRepoDetails(request: request)
     }
     
@@ -101,7 +104,9 @@ class RepositoryDetailsViewController: UIViewController, RepositoryDetailsDispla
     }
     
     @IBAction func stareButtonAction(_ sender: UIButton) {
-        
+        var request = RepositoryDetails.UseCase.Request()
+        request.userRepoViewModel = userReposViewMode
+        interactor?.stareRepoDetails(request: request)
     }
     
     @IBAction func openBrowserAction(_ sender: Any) {

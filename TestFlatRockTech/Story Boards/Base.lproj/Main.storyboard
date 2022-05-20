@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N90-3o-YLh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R7r-dS-e9J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -53,12 +53,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1839.1304347826087" y="97.767857142857139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--List-->
         <scene sceneID="nx3-Ln-33W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N90-3o-YLh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" selectedImage="list.dash" id="pNx-2z-uKH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8NS-Zf-lWD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -71,10 +72,59 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lxh-W4-cyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--StaredRepos-->
+        <scene sceneID="Fd0-CZ-2gK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StaredRepos" id="Xzv-8u-hS6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Tp2-7g-ZW7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUW-MH-UKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="901"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZRQ-EE-3uz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="R7r-dS-e9J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6d8-Wv-NRS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="N90-3o-YLh" kind="relationship" relationship="viewControllers" id="hPN-L3-wPJ"/>
+                        <segue destination="Hv8-55-WNj" kind="relationship" relationship="viewControllers" id="ugz-ko-7eI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIX-Xa-but" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+        <!--Stared-->
+        <scene sceneID="dkr-7s-avX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hv8-55-WNj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stared" image="star" catalog="system" id="nyp-KA-0td"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Srb-97-Cb1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xzv-8u-hS6" kind="relationship" relationship="rootViewController" id="e7F-DQ-A8g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THU-IC-jyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="901"/>
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

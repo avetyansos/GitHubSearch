@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SearchRouter.navigateToSearchList(viewModel:):SearchRouter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewController?.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RepositoryListTableViewCell.userRepo.didset:RepositoryListTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userRepo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
